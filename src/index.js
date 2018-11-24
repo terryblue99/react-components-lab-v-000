@@ -47,7 +47,7 @@ export class ButcherShop extends Component {
         </ul>
       </div>
     )
-  }
+  }  
 }
 
 export class App extends Component {
