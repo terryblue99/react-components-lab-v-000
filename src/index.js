@@ -12,31 +12,57 @@ const BUTCHER_PRODUCTS = [
 export class OlderCoaster extends Component {
 
   // this function should return the JSX we want the DOM to render
-  // render() {
-  //   return (
-  //     <div>Hello!</div>
-  //   )
-  // }
-  //
-}
-
-export class InFrontOfYou extends Component {
-  // your code here
-}
-
-export class ButcherShop extends Component {
-  // your code here
-}
-
-
-export class App extends Component {
   render() {
     return (
-      <div id="app">
-
+      <div class="oldercoaster">
+        <p>Two grannies having the time of their life!</p>
+        <p>Passengers:</p>
+        <ul>
+          <li>Agnes</li>
+          <li>Muriel</li>
+        </ul>
       </div>
     )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('global'))
+export class InFrontOfYou extends Component {
+  render() {
+    return (
+      <div>
+        <p>You shouldn't look too far.</p>
+        <p>Sometimes, the solution is right in front of you.</p>
+      </div>
+    )
+  }
+}
+
+export class ButcherShop extends Component {
+  render() {
+    return (
+      <div class="butcher-shop">
+        <p>Hello! We have the following products for sale today:</p>
+        <ul>
+          <li>Tenderloin</li>
+          <li>Short ribs</li>
+          <li>Beef shin</li>
+          <li>Ribeye</li>
+        </ul>
+      </div>
+    )
+  }
+}
+
+export class App extends Component {
+  render() {
+    return (
+      <div id="app">
+        <OlderCoaster />
+        <InFrontOfYou />
+        <ButcherShop />
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
